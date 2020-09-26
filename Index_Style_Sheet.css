@@ -1,0 +1,75 @@
+/*Body Section*/
+body {
+	background-color: ghostwhite;
+}
+/*Navigation Tool Bar Section*/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+}
+li {
+	display: inline;	
+}
+a.navLinkStyle  {
+	text-decoration: none;
+}
+a.navLinkStyle:link {
+	color:black;
+}
+a.navLinkStyle:visited {
+	color:black;
+}
+
+a.navLinkStyle:hover {
+	color: blue;
+}
+a.navLinkStyle:active {
+	color: red;
+}
+/*Table Section*/
+/*This section is ment for the assignments ID*/
+#assignments {
+	border-collapse: collapse;
+	width:100%;
+}
+#assignments table, th, td {
+	border: 1px solid black;	
+}
+#assignments th, td {
+	padding: 6px;
+}
+#assignments th {
+	background-color:white;
+	text-align: left;
+}
+#assignments tr:nth-child(even) {
+	background-color:LightGray;
+}
+#assignments tr:nth-child(odd) {
+	background-color:white;
+}
+#assignments td:hover {
+	background-color: Gray;	
+}	
+#assignments caption {
+	font-weight: bold;
+	font-size:200%;
+}
+a.tableLinkStyle {
+	text-decoration: none;
+	display:block;
+}
+a.tableLinkStyle:link {
+	color:blue;
+}
+a.tableLinkStyle:visited {
+	color:purple;
+}
+
+a.tableLinkStyle:hover {
+	color: skyblue;
+}
+a.tableLinkStyle:active {
+	color: red;
+}
