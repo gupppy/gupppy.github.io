@@ -44,7 +44,7 @@ img[alt="cat icon"]{
 /*Sets the position of the dog icon*/
 img[alt="dog icon"]{
 	position: relative;
-	left: 5px;
+	left: 50px;
 	bottom: 150px;
 	z-index: 1;
 }
