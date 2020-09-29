@@ -1,6 +1,65 @@
 /*Body Section*/
 body {
-	background-color: ghostwhite;
+	background-color: GhostWhite;
+}
+/*Background Decorations*/
+#darkGray {		
+	height: 200px;
+	width: 125px;	
+	position: fixed;
+	z-index: -1;
+	top: 10%;
+	left: 15%;	
+}
+#limeGreen {
+	height: 100px;
+	width: 300px;	
+	position: fixed;
+	z-index: -2;
+	top: 10%;
+	left: 15%;	
+}
+#red {
+	height: 100px;
+	width: 300px;	
+	position: fixed;
+	z-index: -1;
+	top: 7%;
+	right: 10%;	
+}
+#orange {
+	height: 400px;
+	width: 100px;	
+	position: fixed;
+	z-index: -2;
+	right: 10%;	
+}
+#stylishDiv {
+	background-color: black;
+	height: 300px;
+	width: 200px;	
+	position: fixed;
+	z-index: -1;
+	bottom: 1%;
+	left: 30%;	
+}
+#styleishNestedDiv1 {
+	background-color: grey;
+	height: 50px;
+	width: 300px;	
+	position: absolute;
+	z-index: -1;
+	top: 20%;
+	right: 10%;	
+}
+#styleishNestedDiv2 {
+	background-color: GhostWhite;
+	height: 200px;
+	width: 50px;	
+	position: absolute;
+	z-index: -1;
+	bottom: 10%;
+	left: 20%;	
 }
 /*Navigation Tool Bar Section*/
 ul {
@@ -64,7 +123,7 @@ a.tableLinkStyle:link {
 	color:blue;
 }
 a.tableLinkStyle:visited {
-	color:purple;
+	color:darkblue;
 }
 
 a.tableLinkStyle:hover {
@@ -72,4 +131,8 @@ a.tableLinkStyle:hover {
 }
 a.tableLinkStyle:active {
 	color: red;
+}
+/*Footer Section*/
+footer {
+	background-color: ghostwhite;
 }
