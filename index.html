@@ -11,13 +11,13 @@
   </head>
 <body>
 <!--Background Decorations-->
-<div>
-  <img id="darkGray" src="pictures/Gray.png" alt="Gray Background">
-  <img id="limeGreen" src="pictures/LimeGreen.png" alt="Lime Green Background">
-  <img id="red" src="pictures/Red.png" alt="Red Background">
-  <img id="orange" src="pictures/Orange.png" alt="Orange Background">
-  <div id="stylishDiv"><div id="styleishNestedDiv1"></div><div id="styleishNestedDiv2"></div></div>
-</div>
+<!-- <div> -->
+<!-- <img id="darkGray" src="pictures/Gray.png" alt="Gray Background"> -->
+<!-- <img id="limeGreen" src="pictures/LimeGreen.png" alt="Lime Green Background"> -->
+<!-- <img id="red" src="pictures/Red.png" alt="Red Background"> -->
+<!-- <img id="orange" src="pictures/Orange.png" alt="Orange Background"> -->
+<div id="stylishDiv"><div id="styleishNestedDiv1"></div><div id="styleishNestedDiv2" onclick="changeColorOfElement();"></div></div>
+<!-- </div> -->
 <!-- Header and Navigation section -->
   <div style="text-align:center;"> <!-- Grouped the header and links together using an empty tag-->
 	<header>
@@ -47,37 +47,37 @@
 	    <th>Date Submited</th>
 	  </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="assignments/assignment01.html">Assignment 01</a></td>
+        <td><a class="tableLinkStyle" href="assignment01/assignment01.html">Assignment 01</a></td>
         <td>9/14/2020</td>
         <td>9/13/2020</td>
       </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="assignments/Assignment2.html">Assignment 02</a></td>
+        <td><a class="tableLinkStyle" href="assignment02/Assignment2.html">Assignment 02</a></td>
         <td>9/28/2020</td>
         <td>9/26/2020</td>
       </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="#">Assignment 03</a></td>
+        <td><a class="tableLinkStyle" href="assignment03/assignment3.html">Assignment 03</a></td>
         <td>TBD</td>
         <td>-</td>
       </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="#">Assignment 04</a></td>
+        <td><a class="tableLinkStyle" href="assignment04/assignment4.html">Assignment 04</a></td>
         <td>TBD</td>
         <td>-</td>
       </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="#">Assignment 05</a></td>
+        <td><a class="tableLinkStyle" href="assignment05/assignment5.html">Assignment 05</a></td>
         <td>TBD</td>
         <td>-</td>
       </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="#">Assignment 06</a></td>
+        <td><a class="tableLinkStyle" href="assignment06/assignment6.html">Assignment 06</a></td>
         <td>TBD</td>
         <td>-</td>
       </tr>
 	  <tr>
-        <td><a class="tableLinkStyle" href="#">Assignment 07</a></td>
+        <td><a class="tableLinkStyle" href="assignment07/assignment7.html">Assignment 07</a></td>
         <td>TBD</td>
         <td>-</td>
       </tr>
@@ -85,9 +85,18 @@
   <!--Footer Section-->
   <footer>
     <hr>
-	<p style="text-align:Center;">
+	<p id="date"></p>
+	<p>
 	Created by an Anonymous Guppy
 	</p>
-  </footer>  
+  </footer>
+  <!--External JavaScript Section-->
+  <script src="index_javaScript.js"></script>
+  <!--Calling Functions when Document is accessed-->
+  <script>
+    welcomeToConsole();
+	displayDate();
+  </script>
+<link>   
 </body>
 </html>

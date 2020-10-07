@@ -135,4 +135,8 @@ a.tableLinkStyle:active {
 /*Footer Section*/
 footer {
 	background-color: ghostwhite;
+	text-align:Center;
+}
+#date {
+	color: black;
 }
