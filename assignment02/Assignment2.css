@@ -1,0 +1,87 @@
+/* --- put your css here --- */ 
+/* Changes the background of the body element*/
+/* PART A */
+body {
+	background-color: skyblue;
+}
+#igottabeme {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.classy {
+	margin-left: 10px;
+}
+/* PART B */
+/* This is give elements a bottom margin*/
+#d1, #d2, #d3 {
+	margin-bottom: 50px;
+}
+/*This will set the width, height, border and background color to these classes*/
+.a, .b, .c {
+	width: 100px;
+	height: 50px;
+	padding: 5px 20px 5px 20px;
+	border: 5px solid blue;
+	background-color: yellow;
+}
+/* Specify additional properties-values for each class from above*/
+.a {
+	display: inline;
+}
+.b {
+	display: block;
+}
+.c {
+	display: inline-block;
+}
+/* PART C */
+/*Sets the position of the cat icon*/
+img[alt="cat icon"]{
+	 position: fixed;
+	 bottom: 2px;
+	 right: 2px;
+	 z-index: 1;
+ }
+/*Sets the position of the dog icon*/
+img[alt="dog icon"]{
+	position: relative;
+	left: 50px;
+	bottom: 150px;
+	z-index: 1;
+}
+/*Sets the position of the bird icon*/
+img[alt="bird icon"]{
+	position: relative;
+	left: 250px;
+	top: 50px;	
+	z-index: 1;
+}
+/*Sets the position of the Nav bar*/
+nav{
+	position: sticky;
+	top: 0px; /*Sets when the nav bar 'sticks'*/
+	z-index: 1;
+	background-color: green;
+	opacity: 90%;
+	padding: 5px;
+	font-size: 20px;
+}
+/* --- pre-existing css --- */
+.stripey tr:nth-child(even) {
+  background-color: gray;
+}
+.stripey tr:nth-child(odd) {
+  background-color: white;
+}
+.stripey th {
+  color: white;
+  background-color: black;
+}
+.mousey td:hover {
+  background-color: yellow;
+}
+.rightey td {
+  text-align: right;
+}
+input[type="text"].pinkey:focus {
+  background-color: pink;
+}
