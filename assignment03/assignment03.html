@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="eng-us">
+<head>
+  <title>Assignment03</title>
+  <style>
+    <!-- Internal CSS-->	
+	table, th, tr {	  	  
+	  text-align: center;
+	  border-bottom: 1px solid black;
+	}
+	button.btn-success {
+	  background-color: lightgreen;
+	}
+	button.btn-danger {
+	  background-color: red;
+	}
+	button.btn-clear {
+	  background-color: white;
+	}
+	.table-striped tr:nth-child(even) {
+	  background-color:LightGray;
+	}
+  </style>
+</head>
+<body onload="onStart()" style="text-align: center;">
+<h1>Golf Scorecard</h1>
+<table class="table table-striped" style ="width: 100%; border-collapse: collapse;">
+  <tr>
+    <th>Hole</th>
+    <th>Par</th>
+    <th>Score</th>
+    <th>Over</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn-success">+</button> <button class="btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr id="7">
+    <td>7</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr">
+    <td>11</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>4</td>
+    <td>-</td>
+    <td>-</td>
+    <td><button class="btn btn-success">+</button> <button class="btn btn-danger">-</button></td>
+  </tr>
+  <tr id="totals">
+    <td id="allTotal">TOTALS</td>
+    <td id="parTotal">-</td>
+    <td id="scoreTotal">-</td>
+    <td id="overTotal">-</td>
+    <td id="NA"></td>
+  </tr>
+</table>
+<p id="buttons"></p>
+<p><button  onclick="btnhideAndSeek()">Show Wireframe Diagram</button></p>
+<p><img id="hideAndSeek" style="display: none;" src="golf_scorecard_design.png" alt="Wireframe"></p>
+<!-- External Javascript -->
+<script src="assignment03_javaScript.js"></script>
+
+</body>
+</html>
