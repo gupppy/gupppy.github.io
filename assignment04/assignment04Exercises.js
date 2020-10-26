@@ -162,8 +162,6 @@ function rowTotal(rowID){
 	let price = parseInt(table3b.children[0].children[rowID].children[1].innerText);
 	let qty = parseInt(table3b.children[0].children[rowID].children[2].innerText);
 	table3b.children[0].children[rowID].children[3].innerText = price*qty;
-	
-	return " ";
 }
 //Finds the sum of a colum then inserts the value into the last cell
 function columTotal(columID, ){
@@ -176,51 +174,87 @@ function columTotal(columID, ){
 }
 // 9. Refactor a non-object-oriented form
 <!-- code below is from: https://www.guru99.com/practical-code-examples-using-javascript.html -->
-	//function allows the creation of an array using six elements
-	function createArray6(element0, element1, element2, element3, element4, element5){
-		let newArray = [element0, element1, element2, element3, element4, element5];
-		return newArray;
+	
+	//MY CODE:
+	
+	//Checks which object is in focus, returns that objects index.	
+	function isInFocus(i){
+		let active = document.activeElement;
+		
+		if(document.getElementById('first') == active)
+			return 0;
+        if(document.getElementById('last') == active)
+			return 1;
+        if(document.getElementById('email')== active)
+			return 2;
+		if(document.getElementById('uid')== active)
+			return 3;
+		if(document.getElementById('password')== active)
+			return 4;
+		if(document.getElementById('confirm')== active)
+			return i;
+		//If the button is is the active element
+		if(document.getElementById('create')== active)
+			return i;
 	}
-    // initialize error div id array
-    let divs = createArray6("errFirst","errLast","errEmail","errUid","errPassword","errConfirm");    
+	
+	//END OF MY CODE
+	
+     // initialize error div id array
+    const divs = new Array();
+    divs[0] = "errFirst";
+    divs[1] = "errLast";
+    divs[2] = "errEmail";
+    divs[3] = "errUid";
+    divs[4] = "errPassword";
+    divs[5] = "errConfirm";
 
     // function: validate() ---------------------------------------------
     function validate() {
         // initialize input array
-        let inputs = createArray6(document.getElementById('first').value, document.getElementById('last').value, document.getElementById('email').value,
-			document.getElementById('uid').value, document.getElementById('password').value, document.getElementById('confirm').value);
+        let inputs = new Array();
+        inputs[0] = document.getElementById('first').value;
+        inputs[1] = document.getElementById('last').value;
+        inputs[2] = document.getElementById('email').value;
+        inputs[3] = document.getElementById('uid').value;
+        inputs[4] = document.getElementById('password').value;
+        inputs[5] = document.getElementById('confirm').value;
         // initialize error array
-        let errors = createArray6(
-			"<span style='color:red'>Please enter your first name!</span>",
-			"<span style='color:red'>Please enter your last name!</span>",
-			"<span style='color:red'>Please enter your email!</span>",
-			"<span style='color:red'>Please enter your user id!</span>",
-			"<span style='color:red'>Please enter your password!</span>",
-			"<span style='color:red'>Please confirm your password!</span>");
+        let errors = new Array();
+        errors[0] = "<span style='color:red'>Please enter your first name!</span>";
+        errors[1] = "<span style='color:red'>Please enter your last name!</span>";
+        errors[2] = "<span style='color:red'>Please enter your email!</span>";
+        errors[3] = "<span style='color:red'>Please enter your user id!</span>";
+        errors[4] = "<span style='color:red'>Please enter your password!</span>";
+        errors[5] = "<span style='color:red'>Please confirm your password!</span>";
         // update error array with error message
-        for (i in inputs) {
+        for (let i in inputs) {
             let errMessage = errors[i];
             let div = divs[i];
-            if (inputs[i] == "")
-                document.getElementById(div).innerHTML = errMessage;
-            else if (i == 2) {
-                let atpos = inputs[i].indexOf("@");
-                let dotpos = inputs[i].lastIndexOf(".");
-                if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[i].length)
-                    document.getElementById('errEmail').innerHTML 
-                      = "<span style='color: red'>Enter a valid email address!</span>";
-                else
-                    document.getElementById(div).innerHTML = "OK!";
-            } else if (i == 5) {
-                let first = document.getElementById('password').value;
-                let second = document.getElementById('confirm').value;
-                if (second != first)
-                    document.getElementById('errConfirm').innerHTML 
-                      = "<span style='color: red'>Your passwords don't match!</span>";
-                else
-                    document.getElementById(div).innerHTML = "OK!";
-            } else
-                document.getElementById(div).innerHTML = "OK!";
+			if(i == isInFocus(i))//MyCODE
+			console.log()
+			{
+				if (inputs[i] == "" )
+					document.getElementById(div).innerHTML = errMessage;
+				else if (i == 2) {
+					let atpos = inputs[i].indexOf("@");
+					let dotpos = inputs[i].lastIndexOf(".");
+					if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[i].length)
+						document.getElementById('errEmail').innerHTML 
+						  = "<span style='color: red'>Enter a valid email address!</span>";
+					else
+						document.getElementById(div).innerHTML = "OK!";
+				} else if (i == 5) {
+					let first = document.getElementById('password').value;
+					let second = document.getElementById('confirm').value;
+					if (second != first)
+						document.getElementById('errConfirm').innerHTML 
+						  = "<span style='color: red'>Your passwords don't match!</span>";
+					else
+						document.getElementById(div).innerHTML = "OK!";
+				} else
+					document.getElementById(div).innerHTML = "OK!";
+			}
         }
     }
 
@@ -231,6 +265,7 @@ function columTotal(columID, ){
             let div = divs[i];
             if (document.getElementById(div).innerHTML == "OK!")
                 count = count + 1;
+			console.log(count);
         }
         if (count == 6)
             document.getElementById("errFinal").innerHTML 
