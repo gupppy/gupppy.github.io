@@ -180,22 +180,31 @@ function columTotal(columID, ){
 	//Checks which object is in focus, returns that objects index.	
 	function isInFocus(i){
 		let active = document.activeElement;
-		
-		if(document.getElementById('first') == active)
+		console.log(active);
+		if(document.getElementById('first') == active){
+			console.log("isInFocus"+0);
 			return 0;
-        if(document.getElementById('last') == active)
+		}
+        if(document.getElementById('last') == active){
+			console.log("isInFocus"+0);
 			return 1;
-        if(document.getElementById('email')== active)
+		}
+        if(document.getElementById('email')== active){
 			return 2;
-		if(document.getElementById('uid')== active)
+		}
+		if(document.getElementById('uid')== active){
 			return 3;
-		if(document.getElementById('password')== active)
+		}
+		if(document.getElementById('password')== active){			
 			return 4;
-		if(document.getElementById('confirm')== active)
-			return i;
+		}
+		if(document.getElementById('confirm')== active){
+			return 5;
+		}
 		//If the button is is the active element
-		if(document.getElementById('create')== active)
+		if(document.getElementById('create')== active){
 			return i;
+		}
 	}
 	
 	//END OF MY CODE
@@ -231,9 +240,8 @@ function columTotal(columID, ){
         for (let i in inputs) {
             let errMessage = errors[i];
             let div = divs[i];
-			if(i == isInFocus(i))//MyCODE
-			console.log()
-			{
+			//MY LINE OF CODE
+			if(i == isInFocus(i)){
 				if (inputs[i] == "" )
 					document.getElementById(div).innerHTML = errMessage;
 				else if (i == 2) {
